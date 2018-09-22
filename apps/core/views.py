@@ -3,27 +3,17 @@ from django.views.generic import TemplateView, CreateView, ListView, DeleteView,
 from django.template import context
 from .models import Post, Contacto
 from .forms import FormularioContacto
+#### SOLO USUARIOS CON PERMISIONES PODRAN CREAR
+from django.contrib.auth.mixins import PermissionRequiredMixin
 
 class IndexView(TemplateView):
 	template_name = "index.html"
 	model = Post
+class CreatePost(PermissionRequiredMixin, CreateView):
+    model = Contacto
+    fields = '__all__'
+    permission_required = 'catalog.can_mark_returned'
 
-class CreatePost(CreateView): # aqui deberia ir el metodo CreateView pero para usarlo te falta el atributo model_form para que 
-    template_name = "app1/formulario.html"
-    form_class = FormularioContacto
-    model_form = Contacto
-
-    def add_formulario(request):
-       template_name = "app1/formulario.html"
-       form  = FormularioContacto()
-       if request.method == 'POST':
-           form = FormularioContacto(request.POST)
-           if f.is_valid():
-              Formulario_item = form.save(commit=False)
-              Formulario_item.save()
-           return render(template_name,{'form':form})
-          
-       return render(template_name,{'form':form}, context)
 
 class ListPost(ListView):
 	template_name = "core/"
