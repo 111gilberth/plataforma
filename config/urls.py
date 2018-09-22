@@ -19,6 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('core/', include('apps.core.urls', namespace='core')),
+    path('accounts/', include('apps.accounts.urls')),
     #luego cambias este nombre es solo par que funcione deberia funcionar ejecutalo, voy
     #path('author-polls/', include('polls.urls', namespace='author-polls')),
     #ajajajaja si esta bien asi pero yo lo que quiero es que cuando le de un click aqui, me mande a este archivo html, esa es mi duda perdon por no darme a entender
