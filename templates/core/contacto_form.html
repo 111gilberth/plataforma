@@ -1,0 +1,58 @@
+{% extends "index.html" %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="utf-8" />
+<title>PLATAFORMA</title>
+<!-- css -->
+{%load staticfiles%}
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'css/product.css' %}">
+<script src="{% static 'js/typed.min.js' %}"></script>
+<style type="text/css">
+        #typed {display: inline;}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="form-row">
+    <div class="form-group col-md-6">
+
+<form method = "POST" action"">
+
+{% csrf_token %}
+{{form}}
+<input type="submit" value"guardar">
+</div></div>
+</form>
+</div>
+	{%block content%} 
+
+</br>
+<div class="container">
+<div class="form-row">
+    <div class="form-group col-md-6">
+
+<form method = "POST" action"">
+
+{% csrf_token %}
+{{form}}
+<input type="submit" value"guardar">
+</div></div>
+</form>
+</div>
+
+
+{%endblock%}
+
+
+</body>
+</html>
+<!-- ya vi ya quedó mi duda :) muchas gracias solo necesito otra pequeña aun 
+	?? podrias ayudarme, quiero heredar estilo de una plantilla a otra :(-
+	dame un momento, claro amigo y de verdad que me hiciste un grandisimo favor sabes porque te salio? porque estaba
+	jalandome los archivos de mis static y lo borraste por eso te salio ese error perdon :(
+
+	mm pero con eso ya te puedes guiar cierto ?obvio:)
+
+	recuerda que el metodo Team
