@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView, ListView, DeleteView, UpdateView
+from django.urls import reverse, reverse_lazy
 from django.template import context
 from .models import Post, Contacto
 from .forms import FormularioContacto
@@ -11,8 +12,10 @@ class IndexView(TemplateView):
 	model = Post
 class CreatePost(PermissionRequiredMixin, CreateView):
     model = Contacto
-    fields = '__all__'
+    form_class = FormularioContacto
+    success_url = reverse_lazy('formulario:test')
     permission_required = 'catalog.can_mark_returned'
+
 
 
 class ListPost(ListView):
