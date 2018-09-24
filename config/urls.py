@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from apps.core.urls import formulario_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('core/', include('apps.core.urls', namespace='core')),
+    path('core/', include(formulario_patterns)),
     path('accounts/', include('apps.accounts.urls')),
     #luego cambias este nombre es solo par que funcione deberia funcionar ejecutalo, voy
     #path('author-polls/', include('polls.urls', namespace='author-polls')),

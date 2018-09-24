@@ -13,7 +13,7 @@ class Post(models.Model):
 	autor = models.ForeignKey(User, related_name='autor_del_post', on_delete=models.CASCADE) #campo contenedor de la relacion
 
 class Contacto(models.Model):
-    Nombre = models.CharField(max_length=180)
-    Apellido_paterno = models.CharField(max_length=90)
-    Apellido_materno = models.CharField(max_length=90)
-    Correo = models.EmailField(max_length=254)
+    Nombre = models.CharField(max_length=180,verbose_name="Nombre")
+    Apellido_paterno = models.CharField(max_length=90,verbose_name="Apellido Paterno")
+    Apellido_materno = models.CharField(max_length=90,verbose_name="Apellido Materno")
+    Correo = models.EmailField(max_length=254,verbose_name="Correo Electrónico")
