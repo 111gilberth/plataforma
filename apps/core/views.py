@@ -13,9 +13,10 @@ class IndexView(TemplateView):
 class CreatePost(PermissionRequiredMixin, CreateView):
     model = Contacto
     form_class = FormularioContacto
-    success_url = reverse_lazy('formulario:test')
+    success_url = reverse_lazy('formulario:congrats')
     permission_required = 'catalog.can_mark_returned'
-
+def congrats(request):
+    return render(request,'core/congrats.html')
 
 
 class ListPost(ListView):

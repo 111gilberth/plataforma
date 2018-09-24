@@ -16,8 +16,8 @@
 <!-- Nav -->
     <nav class="site-header sticky-top py-1">
       <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block" href="#">INICIO</a>
-        <a class="py-2 d-none d-md-inline-block" href="#">INICIAR SESIÓN</a>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'formulario:indexpage' %}">INICIO</a>
+        <a class="py-2 d-none d-md-inline-block" href="{% url 'login' %}">INICIAR SESIÓN</a>
       </div>
     </nav>
 <!-- Nav END-->
@@ -46,7 +46,7 @@
           ahi debes poner tu ruta de url, osea pongo core/register.html??? ejecuta el proyecto y miremos, la estructura de url no e es la mejor
           me sigue saliendo ese error-->
         
-        <a href="{% url 'core:test' %}" class="card-link">Registrate!</a>
+        <a href="{% url 'signup' %}" class="card-link">Registrate!</a>
       </div>
     </div>
 
@@ -184,7 +184,7 @@
         <!-- Grid column -->
         <div class="col-md-2 mb-3">
           <h6 class="text-uppercase font-weight-bold">
-            <a href="#!">Contacto</a>
+            <a href="{% url 'formulario:test' %}">Contacto</a>
           </h6>
         </div>
         <!-- Grid column -->
