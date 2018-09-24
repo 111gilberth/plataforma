@@ -5,28 +5,31 @@
 
 {% block content %}
 
+</br>
+
 {% if error %}
 <p>{{error}}</p>
 <br>
 <br>
 {% endif %}
 <div class="container">
-<h1>Log in</h1>
+
+<h1>Inicia sesión</h1>
 
 <form method="POST" action="{% url 'login' %}">
 {% csrf_token %}
-Username:
+Usuario:
 <br />
-<input type="text" name="username" />
+<input type="text" class="form-control" name="username" placeholder="Escribe tu Usuario" />
 <br />
-Password:
+Contraseña:
 <br />
-<input type="password" name="password" />
+<input type="password" class="form-control" name="password" placeholder="Escribe tu contraseña" />
 <br />
-<br />
-<input class="btn btn-primary" type="submit" value="Login" />
-</form>
 
+<input class="btn btn-secondary" type="submit" value="Iniciar sesión" />
+</form>
+<br />
 {% endblock %}
 
 <br />

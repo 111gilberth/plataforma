@@ -17,3 +17,7 @@ class Contacto(models.Model):
     Apellido_paterno = models.CharField(max_length=90,verbose_name="Apellido Paterno")
     Apellido_materno = models.CharField(max_length=90,verbose_name="Apellido Materno")
     Correo = models.EmailField(max_length=254,verbose_name="Correo Electrónico")
+    class Meta:
+        verbose_name = "Contactos registrados por medio del formulario"
+    def __str__(self):
+        return '%s %s' % (self.Nombre, self.Apellido_paterno)
