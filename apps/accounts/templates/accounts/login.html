@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+
+
+
+{% block content %}
+
+</br>
+
+{% if error %}
+<p>{{error}}</p>
+<br>
+<br>
+{% endif %}
+<div class="container">
+
+<h1>Inicia sesión</h1>
+
+<form method="POST" action="{% url 'login' %}">
+{% csrf_token %}
+Usuario:
+<br />
+<input type="text" class="form-control" name="username" placeholder="Escribe tu Usuario" />
+<br />
+Contraseña:
+<br />
+<input type="password" class="form-control" name="password" placeholder="Escribe tu contraseña" />
+<br />
+
+<input class="btn btn-secondary" type="submit" value="Iniciar sesión" />
+</form>
+<br />
+{% endblock %}
+
+<br />
+</div>
+
+   

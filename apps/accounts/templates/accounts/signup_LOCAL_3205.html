@@ -1,0 +1,143 @@
+{% extends 'index.html' %}
+{% block content %}
+
+{% if error %}
+<p>{{error}}</p>
+<br>
+<br>
+{% endif %}
+<div class="container">
+<h1>¡Regístrate!</h1>
+	<form method="POST" action="{% url 'signup' %}">
+	 	{% csrf_token %}
+		Datos del contacto:
+		<br />
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Nombre:</label>
+				<div class="col-10">
+					<input type="text" name="username" class="form-control" placeholder="Ingresa el nombre de tu usuario, el cual deseas crear" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Apellido paterno:</label>
+				<div class="col-10">
+					<input type="password" name="password1" class="form-control" placeholder="Ingresa tu apellido paterno" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Apellido materno:</label>
+				<div class=" col-10">
+					<input type="password" name="password2" class="form-control" placeholder="Ingresa tu apellido materno" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Correo:</label>
+				<div class="col-10">
+					<input type="password" name="password1" class="form-control" placeholder="Ingresa tu correo" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Telefono:</label>
+				<div class="col-10">
+					<input type="password" name="password2" class="form-control" placeholder="Ingresa tu telefono" />
+				</div>
+			</div>
+			<br />
+				<label class="">Direccion del negocio</label>
+			<br />
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Nombre del negocio:</label>
+				<div class="col-10">
+					<input type="text" name="username" class="form-control" placeholder="Ingresa el nombre del negocio" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Código postal:</label>
+				<div class="col-10">
+					<input type="password" name="password1" class="form-control" placeholder="Ingresa el código postal" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Colonia:</label>
+				<div class="col-10">
+					<input type="password" name="password2" class="form-control" placeholder="Ingresa tu colonia" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Municipio:</label>
+				<div class="col-10">
+					<input type="password" name="password1" class="form-control" placeholder="Ingresa el municipio" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Estado:</label>
+				<div class="col-10">
+					<input type="password" name="password2" class="form-control" placeholder="Ingresa tu estado" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Calle:</label>
+				<div class="col-10">
+					<input type="password" name="password1" class="form-control" placeholder="Ingresa tu calle" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Giro del negocio:</label>
+				<div class="col-10">
+					<input type="password" name="password2" class="form-control" placeholder="Ingresa el giro del negocio" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">No. interior:</label>
+				<div class="col-10">
+					<input type="password" name="password1" class="form-control" placeholder="Ingresa el No. interior" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">No. Exterior:</label>
+				<div class="col-10">
+					<input type="password" name="password2" class="form-control" placeholder="Ingresa el No. exterior" />
+				</div>
+			</div>
+			<br />
+			Horarios:
+			<br />
+			Lunes a viernes :
+			<br />
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Desde:</label>
+				<div class="col-10">
+					<input type="password" name="password2" class="form-control" placeholder="" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Hasta:</label>
+				<div class="col-10">
+					<input type="password" name="password2" class="form-control" placeholder="" />
+				</div>
+			</div>
+			<br />
+			Sabado y Domingo
+			<br /> 
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Desde:</label>
+				<div class="col-10">
+					<input type="password" name="password2" class="form-control" placeholder="" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-2 col-form-label">Hasta:</label>
+				<div class="col-10">
+					<input type="password" name="password2" class="form-control" placeholder="" />
+				</div>
+			</div>
+				<div class="col-12">
+					<input class="btn btn-secondary" type="submit" value="Registrame" align="center" />
+				</div>
+	</form>
+</br>
+</div>
+{% endblock %}
+
+
+
