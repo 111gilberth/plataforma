@@ -288,6 +288,18 @@
                                   });
                                 });
         </script>
+<link rel="stylesheet" href="{% static 'my_app/css/bootstrap-theme.min.css' %}">
+<link rel="stylesheet" href="{% static 'my_app/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'my_app/css/datepicker.css' %}">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet" href="{% static 'my_app/js/bootstrap-datepicker.js' %}">
+
+
+<script>
+$(document).ready(function(){
+    $('.datepicker').datepicker();
+});
+</script>
       <!-- End javascript -->
 </body>
 </html>

@@ -4,11 +4,11 @@ from django.contrib import auth
 
 def signup(request):
     if request.method == 'POST':
-<<<<<<< HEAD
+#<<<<<<< HEAD
         # El usuario tiene información y quiere una cuenta ahora!
-=======
+#=======
         # User has info and wants an account now!
->>>>>>> 84de7422dccebd14ef84d006e602175bf5f0a2a6
+#>>>>>>> 84de7422dccebd14ef84d006e602175bf5f0a2a6
         if request.POST['password1'] == request.POST['password2']:
             try:
                 user = User.objects.get(username=request.POST['username'])
@@ -20,11 +20,11 @@ def signup(request):
         else:
             return render(request, 'accounts/signup.html', {'error':'The passwords you have entered does not match'})
     else:
-<<<<<<< HEAD
+#<<<<<<< HEAD
         # El usuario quiere ingresar información
-=======
+#=======
         # User wants to enter info
->>>>>>> 84de7422dccebd14ef84d006e602175bf5f0a2a6
+#>>>>>>> 84de7422dccebd14ef84d006e602175bf5f0a2a6
         return render(request, 'accounts/signup.html')
 
 def login(request):

@@ -30,6 +30,11 @@
 
 {% csrf_token %}
 {{form.as_p}}
+            <script>
+    $(document).ready(function() {
+        $('.datepicker').datepicker();
+    });
+</script>
 </br>
 </br>
 <input type="submit" class="btn btn-secondary btn-lg" value="Enviar">
@@ -44,6 +49,7 @@
 
 </body>
 </html>
+
 <!-- ya vi ya quedó mi duda :) muchas gracias solo necesito otra pequeña aun 
 	?? podrias ayudarme, quiero heredar estilo de una plantilla a otra :(-
 	dame un momento, claro amigo y de verdad que me hiciste un grandisimo favor sabes porque te salio? porque estaba
